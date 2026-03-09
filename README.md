@@ -1,8 +1,8 @@
-# 🎯 Sentiment Tracker – Multi-Channel Sentiment Analysis & E-Commerce Order Extraction
+# 🎯 Sentiment Tracker – Phân tích cảm xúc đa kênh & Trích xuất đơn hàng
 
 <div align="center">
 
-**A real-time sentiment analysis dashboard with intelligent order extraction for Vietnamese e-commerce**
+**Dashboard phân tích cảm xúc theo thời gian thực với chức năng trích xuất thông tin đơn hàng thông minh cho e-commerce Việt**
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.42.0-red?logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -13,250 +13,250 @@
 
 ---
 
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Model Performance](#model-performance)
-- [Contributing](#contributing)
-- [License](#license)
+## 📋 Mục lục
+- [Giới thiệu](#-giới-thiệu)
+- [Tính năng chính](#-tính-năng-chính)
+- [Stack công nghệ](#-stack-công-nghệ)
+- [Cài đặt](#-cài-đặt)
+- [Hướng dẫn sử dụng](#-hướng-dẫn-sử-dụng)
+- [Cấu trúc dự án](#-cấu-trúc-dự-án)
+- [Hiệu suất mô hình](#-hiệu-suất-mô-hình)
+- [Đóng góp](#-đóng-góp)
+- [Giấy phép](#-giấy-phép)
 
 ---
 
-## 📊 Overview
+## 📊 Giới thiệu
 
-**Sentiment Tracker** is an intelligent web application that helps e-commerce businesses monitor customer sentiment across social media channels while automatically extracting actionable order information from comments and reviews.
+**Sentiment Tracker** là ứng dụng web thông minh giúp các doanh nghiệp thương mại điện tử giám sát cảm xúc khách hàng trên các kênh mạng xã hội, đồng thời tự động trích xuất thông tin đơn hàng từ bình luận và đánh giá.
 
-### What It Does:
-- 🔍 **Real-time Sentiment Analysis**: Analyzes Vietnamese text using a pre-trained **PhoBERT** model to classify sentiment as Positive, Negative, or Neutral
-- 🎁 **Smart Order Extraction**: Automatically detects purchase intentions and extracts contact information (phone numbers, addresses) from comments
-- 📊 **Interactive Dashboard**: Visualizes sentiment trends and order data through a modern Streamlit interface
-- 💾 **Data Export**: Export extracted orders to Excel for seamless integration with order management systems
+### Chức năng chính:
+- 🔍 **Phân tích cảm xúc theo thời gian thực**: Sử dụng mô hình PhoBERT được huấn luyện sẵn để phân loại cảm xúc tiếng Việt (Tích cực/Tiêu cực/Trung lập)
+- 🎁 **Trích xuất đơn hàng thông minh**: Tự động phát hiện ý định mua hàng và trích xuất thông tin liên lạc (số điện thoại, địa chỉ)
+- 📊 **Dashboard tương tác**: Trực quan hóa xu hướng cảm xúc và dữ liệu đơn hàng qua giao diện Streamlit hiện đại
+- 💾 **Xuất dữ liệu**: Xuất các đơn hàng được trích xuất ra Excel để dễ dàng tích hợp với hệ thống quản lý
 
-### Business Impact:
-- **85%+ F1-Score** accuracy on real-world Vietnamese sentiment datasets
-- Reduces manual order entry time by **automating extraction** from social media
-- Enables rapid business decisions based on **live sentiment feedback**
+### Lợi ích kinh doanh:
+- **F1-Score > 85%** độ chính xác trên dữ liệu cảm xúc tiếng Việt thực tế
+- Giảm thời gian nhập đơn hàng thủ công bằng **tự động hóa trích xuất** từ mạng xã hội
+- Hỗ trợ **quyết định kinh doanh nhanh** dựa trên phản hồi cảm xúc trực tiếp
 
 ---
 
-## 🚀 Key Features
+## 🚀 Tính năng chính
 
-| Feature | Description |
+| Tính năng | Mô tả |
 |---------|-------------|
-| **Web Scraper** | Selenium-based headless browser that bypasses bot detection and renders JavaScript-heavy pages (Facebook, news sites) |
-| **Sentiment Classifier** | PhoBERT transformer model fine-tuned for Vietnamese sentiment analysis |
-| **Order Extractor** | Regex-based NLP engine detecting purchase keywords, phone numbers (Vietnamese format), and addresses |
-| **Sentiment Dashboard** | Real-time metrics, pie charts, and trend analysis with Plotly visualizations |
-| **Orders Tab** | Filterable table of extracted order data with export to Excel functionality |
-| **Vietnamese Language Support** | Full Vietnamese text preprocessing (tokenization, stopword removal) using pyvi |
+| **Web Scraper** | Trình duyệt headless dựa trên Selenium, vượt qua phát hiện bot và render các trang JavaScript (Facebook, news) |
+| **Phân loại cảm xúc** | Mô hình PhoBERT được tinh chỉnh cho phân tích cảm xúc tiếng Việt |
+| **Trích xuất đơn hàng** | Engine NLP dựa trên regex phát hiện từ khóa mua hàng, số điện thoại (định dạng Việt), địa chỉ |
+| **Dashboard cảm xúc** | Hiển thị metrics, biểu đồ pie, phân tích xu hướng với Plotly |
+| **Tab đơn hàng** | Bảng dữ liệu đơn hàng được trích xuất, có thể lọc và xuất ra Excel |
+| **Hỗ trợ tiếng Việt** | Xử lý văn bản tiếng Việt hoàn chỉnh (tokenization, loại bỏ stopwords) sử dụng pyvi |
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Stack công nghệ
 
-### Core Framework
-- **Streamlit** (1.42.0) – Web dashboard framework
-- **Python** (3.8+) – Primary language
+### Framework chính
+- **Streamlit** (1.42.0) – Framework dashboard web
+- **Python** (3.8+) – Ngôn ngữ lập trình chính
 
 ### Machine Learning & NLP
-- **PyTorch** (2.6.0) – Deep learning framework
-- **Transformers** (4.49.0) – Pre-trained language models (PhoBERT)
-- **pyvi** – Vietnamese text tokenization & stopword removal
+- **PyTorch** (2.6.0) – Framework deep learning
+- **Transformers** (4.49.0) – Mô hình ngôn ngữ được huấn luyện trước (PhoBERT)
+- **pyvi** – Tokenization tiếng Việt & loại bỏ stopwords
 
-### Web Scraping & Data Processing
-- **Selenium** – Headless browser automation
-- **BeautifulSoup4** – HTML parsing
+### Web Scraping & Xử lý dữ liệu
+- **Selenium** – Tự động hóa trình duyệt
+- **BeautifulSoup4** – Phân tích HTML
 - **Requests** – HTTP client
-- **Pandas** (2.2.3) – Data manipulation & analysis
+- **Pandas** (2.2.3) – Thao tác & phân tích dữ liệu
 
-### Visualization & Export
-- **Plotly** (6.0.0) – Interactive charts
-- **openpyxl** (3.1.5) – Excel export functionality
+### Trực quan hóa & Xuất dữ liệu
+- **Plotly** (6.0.0) – Biểu đồ tương tác
+- **openpyxl** (3.1.5) – Xuất Excel
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Cài đặt
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+### Yêu cầu
+- Python 3.8 trở lên
+- pip (trình quản lý gói Python)
 
-### Step 1: Clone the Repository
+### Bước 1: Clone kho lưu trữ
 ```bash
 git clone https://github.com/laninh-tech/sentiment-tracker.git
 cd sentiment-tracker
 ```
 
-### Step 2: Create Virtual Environment (Recommended)
+### Bước 2: Tạo môi trường ảo (Khuyên dùng)
 ```bash
 python -m venv venv
 
-# On Windows
+# Trên Windows
 venv\Scripts\activate
 
-# On macOS/Linux
+# Trên macOS/Linux
 source venv/bin/activate
 ```
 
-### Step 3: Install Dependencies
+### Bước 3: Cài đặt thư viện
 ```bash
 pip install -r requirements.txt
 ```
 
-This installs:
-- PhoBERT model from Hugging Face (auto-downloaded on first use)
-- ChromeDriver via `webdriver-manager` (auto-managed)
-- All required Python packages
+Quá trình này sẽ cài đặt:
+- Mô hình PhoBERT từ Hugging Face (tự động tải lần đầu tiên)
+- ChromeDriver via `webdriver-manager` (tự động quản lý)
+- Tất cả các gói Python cần thiết
 
 ---
 
-## 🎮 Usage
+## 🎮 Hướng dẫn sử dụng
 
-### Quick Start
+### Bắt đầu nhanh
 ```bash
 streamlit run app.py
 ```
-The application will open in your browser at `http://localhost:8501`
+Ứng dụng sẽ mở trong trình duyệt tại `http://localhost:8501`
 
-### Features & How to Use
+### Cách sử dụng các tính năng
 
-#### 1. **Manual Data Entry**
-- Select "Manual Data Entry" from the Control Panel
-- Paste customer comments or reviews
-- Click "Run Analysis pipeline"
-- View sentiment classification and order extraction results
+#### 1. **Nhập dữ liệu thủ công**
+- Chọn "Manual Data Entry" từ Control Panel
+- Dán bình luận hoặc đánh giá của khách hàng
+- Bấm "Run Analysis pipeline"
+- Xem kết quả phân loại cảm xúc và trích xuất đơn hàng
 
-#### 2. **URL Web Scraper**
-- Select "URL Web Scraper" from the Control Panel
-- Enter a URL (Facebook post, news article, blog)
-- Optional: Provide Facebook cookies for private content
-- Click "Extract & Analyze"
-- System automatically scrapes, tokenizes, and analyzes sentiment
+#### 2. **Scraper URL**
+- Chọn "URL Web Scraper" từ Control Panel
+- Nhập URL (bài viết Facebook, bài báo, blog)
+- Tùy chọn: Cung cấp cookie Facebook để truy cập nội dung riêng tư
+- Bấm "Extract & Analyze"
+- Hệ thống tự động cào, xử lý token và phân tích cảm xúc
 
-#### 3. **Sentiment Dashboard** (Tab 1)
-View key metrics:
-- Total analyzed mentions
-- Positive/Negative/Neutral sentiment counts
-- Pie chart distribution
-- Sentiment confidence scores
-- Individual comment sentiment details
+#### 3. **Dashboard cảm xúc** (Tab 1)
+Xem các số liệu chính:
+- Tổng số bình luận được phân tích
+- Số lượng cảm xúc Tích cực/Tiêu cực/Trung lập
+- Biểu đồ phân bố
+- Điểm tin cậy cảm xúc
+- Chi tiết cảm xúc từng bình luận
 
-#### 4. **E-Commerce Orders** (Tab 2)
-Browse extracted orders:
-- Phone numbers (Vietnamese format: 03x, 05x, 07x, 08x, 09x + 8 digits)
-- Inferred delivery addresses (streets, districts, provinces)
-- Product hints from comments
-- Export to Excel (.xlsx) for shipping labels
+#### 4. **Đơn hàng E-Commerce** (Tab 2)
+Duyệt các đơn hàng được trích xuất:
+- Số điện thoại (định dạng Việt: 03x, 05x, 07x, 08x, 09x + 8 chữ số)
+- Địa chỉ giao hàng được suy luận (đường phố, quận/huyện, tỉnh/thành phố)
+- Gợi ý sản phẩm từ bình luận
+- Xuất ra Excel (.xlsx) cho nhãn vận chuyển
 
-#### 5. **Clear Dashboard**
-Reset data and start fresh with the "🗑️ Clear Dashboard Data" button
+#### 5. **Xóa dữ liệu Dashboard**
+Reset dữ liệu và bắt đầu lại bằng nút "🗑️ Clear Dashboard Data"
 
 ---
 
-## 📁 Project Structure
+## 📁 Cấu trúc dự án
 
 ```
 sentiment-tracker/
-├── app.py                   # Main Streamlit dashboard application
-├── sentiment_model.py       # SentimentModel class + PhoBERT wrapper
-├── scraper.py              # Web scraper using Selenium
-├── order_extractor.py      # Order extraction engine (phone, address, product)
-├── requirements.txt         # Python dependencies
-├── metadata.json           # Project metadata
-├── README.md              # This file
-└── __pycache__/           # Python caching (auto-generated)
+├── app.py                   # Ứng dụng dashboard Streamlit chính
+├── sentiment_model.py       # Lớp SentimentModel + wrapper PhoBERT
+├── scraper.py              # Web scraper sử dụng Selenium
+├── order_extractor.py      # Engine trích xuất đơn hàng (số điện thoại, địa chỉ, sản phẩm)
+├── requirements.txt         # Thư viện Python cần thiết
+├── metadata.json           # Siêu dữ liệu dự án
+├── README.md              # Tệp này
+└── __pycache__/           # Bộ nhớ cache Python (tự động sinh)
 ```
 
-### Key Modules
+### Các module chính
 
 **sentiment_model.py**
-- `SentimentModel`: Loads PhoBERT from Hugging Face
-- `preprocess_text()`: Cleans Vietnamese text (lowercase, URL removal, tokenization)
-- `predict()`: Returns sentiment label + confidence score
+- `SentimentModel`: Tải PhoBERT từ Hugging Face
+- `preprocess_text()`: Làm sạch văn bản tiếng Việt (chuyển thành chữ thường, loại bỏ URL, tokenization)
+- `predict()`: Trả về nhãn cảm xúc + điểm tin cậy
 
 **scraper.py**
-- `scrape_url()`: Selenium headless browser with anti-detection measures
-- Handles JavaScript rendering and Cloudflare protection
-- Extracts text blocks and structures as mock "comments"
+- `scrape_url()`: Trình duyệt headless Selenium với các biện pháp chống phát hiện
+- Xử lý rendering JavaScript và bảo vệ Cloudflare
+- Trích xuất khối văn bản và cấu trúc dưới dạng "bình luận"
 
 **order_extractor.py**
-- `OrderExtractor`: Regex-based order detection
-- Phone number pattern: Vietnamese mobile formats
-- Address keywords & provinces for location detection
-- Product variant indicators (colors, sizes, units)
+- `OrderExtractor`: Phát hiện đơn hàng dựa trên regex
+- Mô hình số điện thoại: Định dạng di động Việt Nam
+- Từ khóa địa chỉ & tỉnh thành để phát hiện vị trí
+- Chỉ báo biến thể sản phẩm (màu sắc, kích cỡ, đơn vị)
 
 **app.py**
-- Streamlit UI with custom CSS styling
-- Session state management for data persistence
-- Tab-based interface (Sentiment Dashboard | Orders)
-- Real-time metrics and interactive visualizations
+- Giao diện Streamlit với CSS tùy chỉnh
+- Quản lý trạng thái phiên cho dữ liệu lưu giữ
+- Giao diện dựa trên tab (Sentiment Dashboard | Orders)
+- Hiển thị metrics theo thời gian thực và trực quan hóa tương tác
 
 ---
 
-## 🎯 Model Performance
+## 🎯 Hiệu suất mô hình
 
-### Sentiment Classification
-- **Model**: PhoBERT (wonrax/phobert-base-vietnamese-sentiment)
-- **F1-Score**: > 85% on Vietnamese sentiment benchmarks
-- **Classes**: Positive, Negative, Neutral
-- **Input**: Pre-processed Vietnamese text (tokenized, cleaned)
-- **Output**: Label + confidence score (0.0 - 1.0)
+### Phân loại cảm xúc
+- **Mô hình**: PhoBERT (wonrax/phobert-base-vietnamese-sentiment)
+- **F1-Score**: > 85% trên các benchmark cảm xúc tiếng Việt
+- **Các lớp**: Tích cực, Tiêu cực, Trung lập
+- **Đầu vào**: Văn bản tiếng Việt được xử lý trước (tokenization, làm sạch)
+- **Đầu ra**: Nhãn + điểm tin cậy (0.0 - 1.0)
 
-### Order Extraction
-- **Phone Detection Rate**: >95% (Vietnamese mobile operator formats)
-- **Address Extraction**: Keyword-based + province matching
-- **Product Hints**: Variant keywords (màu, size, kg, etc.)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Standards
-- Follow PEP 8 Python style guide
-- Add docstrings to functions and classes
-- Test new features locally before submitting
+### Trích xuất đơn hàng
+- **Tỷ lệ phát hiện số điện thoại**: >95% (định dạng nhà mạng di động Việt Nam)
+- **Trích xuất địa chỉ**: Phương pháp dựa trên từ khóa + khớp tỉnh thành
+- **Gợi ý sản phẩm**: Từ khóa biến thể (màu, size, kg, v.v.)
 
 ---
 
-## 📄 License
+## 🤝 Đóng góp
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Mọi đóng góp đều được chào đón! Vui lòng thực hiện theo các bước sau:
+
+1. Fork kho lưu trữ
+2. Tạo nhánh tính năng (`git checkout -b feature/tính-năng-tuyệt-vời`)
+3. Commit thay đổi (`git commit -m 'Thêm tính năng tuyệt vời'`)
+4. Push lên nhánh (`git push origin feature/tính-năng-tuyệt-vời`)
+5. Mở Pull Request
+
+### Tiêu chuẩn code
+- Tuân theo hướng dẫn lập trình PEP 8 của Python
+- Thêm docstrings cho hàm và lớp
+- Kiểm tra các tính năng mới cục bộ trước khi gửi
 
 ---
 
-## 📞 Support
+## 📄 Giấy phép
 
-For issues, feature requests, or questions:
-- Open an issue on [GitHub Issues](https://github.com/laninh-tech/sentiment-tracker/issues)
-- Contact: Check the repository for contact information
+Dự án này được cấp phép theo Giấy phép MIT - xem tệp LICENSE để biết chi tiết.
 
 ---
 
-## 🙏 Acknowledgments
+## 📞 Hỗ trợ
 
-- **PhoBERT**: Pre-trained model from [wonrax](https://huggingface.co/wonrax/phobert-base-vietnamese-sentiment)
-- **Streamlit**: For the awesome web framework
-- **Hugging Face**: For the Transformers library
-- **Vietnamese NLP Community**: For pyvi and language resources
+Để báo cáo vấn đề, yêu cầu tính năng hoặc có câu hỏi:
+- Mở issue trên [GitHub Issues](https://github.com/laninh-tech/sentiment-tracker/issues)
+- Liên hệ: Xem thông tin liên hệ trong kho lưu trữ
+
+---
+
+## 🙏 Ghi nhận
+
+- **PhoBERT**: Mô hình được huấn luyện trước từ [wonrax](https://huggingface.co/wonrax/phobert-base-vietnamese-sentiment)
+- **Streamlit**: Cảm ơn framework web tuyệt vời
+- **Hugging Face**: Cảm ơn thư viện Transformers
+- **Cộng đồng NLP Việt Nam**: Cảm ơn pyvi và các tài nguyên ngôn ngữ
 
 ---
 
 <div align="center">
 
-Made with ❤️ for the Vietnamese e-commerce community
+Được tạo với ❤️ cho cộng đồng thương mại điện tử Việt Nam
 
-[⬆ Back to top](#-sentiment-tracker--multi-channel-sentiment-analysis--e-commerce-order-extraction)
+[⬆ Quay lại đầu trang](#-sentiment-tracker--phân-tích-cảm-xúc-đa-kênh--trích-xuất-đơn-hàng)
 
 </div>
