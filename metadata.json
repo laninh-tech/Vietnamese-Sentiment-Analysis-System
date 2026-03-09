@@ -1,0 +1,5 @@
+{
+  "name": "Sentiment Tracker",
+  "description": "Hệ thống phân tích dư luận đa kênh và phân loại cảm xúc khách hàng.",
+  "requestFramePermissions": []
+}

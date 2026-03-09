@@ -1,0 +1,11 @@
+streamlit==1.42.0
+torch==2.6.0
+transformers==4.49.0
+pandas==2.2.3
+requests==2.32.3
+beautifulsoup4==4.13.3
+plotly==6.0.0
+openpyxl==3.1.5
+selenium==4.15.2
+webdriver-manager==4.0.1
+pyvi==0.1.1
