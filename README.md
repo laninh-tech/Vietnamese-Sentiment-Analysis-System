@@ -25,6 +25,12 @@ A Vietnamese NLP project for sentiment detection and order-intent extraction fro
 - Built a reusable pipeline for sentiment and order-intent analysis
 - Created a practical NLP prototype suitable for portfolio presentation
 
+## Project Assets
+- [Application entry point](app.py)
+- [Sentiment model module](sentiment_model.py)
+- [Order extraction module](order_extractor.py)
+- [Web collection module](scraper.py)
+
 ## Installation
 ```bash
 git clone https://github.com/laninh-tech/Vietnamese-Sentiment-Analysis-System.git
