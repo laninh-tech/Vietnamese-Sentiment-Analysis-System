@@ -1,37 +1,24 @@
-# Sentiment Tracker
+# Sentiment Intelligence Tracker
 
-Production-oriented Vietnamese NLP system for sentiment analysis and e-commerce order information extraction.
+Vietnamese NLP pipeline for sentiment analysis and order-intent extraction from unstructured social content.
 
-## Why this project
-- Turn unstructured social comments into actionable business signals.
-- Detect sentiment in real time to support customer service and brand monitoring.
-- Extract order intent, phone, and address hints to reduce manual operations.
+## Project Objective
+Convert noisy user comments into actionable business insights, including sentiment signals and potential order information.
 
-## Core capabilities
-- Vietnamese sentiment classification pipeline.
-- Rule-based order entity extraction (phone, location, product hints).
-- Web scraping workflow for collecting social text sources.
-- Streamlit dashboard for interactive analysis and export.
-
-## Tech stack
+## Tech Stack
 - Python
-- Transformers / PyTorch
+- PyTorch + Transformers
 - Streamlit
-- Pandas
 - Selenium + BeautifulSoup
+- Pandas
 
-## Project structure
-```text
-sentiment-tracker/
-|-- app.py
-|-- sentiment_model.py
-|-- order_extractor.py
-|-- scraper.py
-|-- requirements.txt
-|-- .env.example
-```
+## Key Capabilities
+- Vietnamese sentiment classification
+- Order signal extraction (phone, location hints, product hints)
+- URL-based text collection workflow
+- Interactive dashboard for analysis and export
 
-## Quick start
+## Installation
 ```bash
 git clone https://github.com/laninh-tech/sentiment-tracker.git
 cd sentiment-tracker
@@ -41,19 +28,22 @@ python -m venv .venv
 # macOS/Linux
 # source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+## Run
+```bash
 streamlit run app.py
 ```
 
-## Use cases
-- Social sentiment monitoring for Vietnamese products and campaigns.
-- Pre-processing and qualification of incoming order comments.
-- Lightweight NLP prototype before production API deployment.
+## Current Results
+- Established a reusable Vietnamese NLP workflow for practical use.
+- Reduced manual review effort by extracting order-relevant signals.
+- Created a foundation for future API deployment and scaling.
 
 ## Roadmap
-- Add benchmark report for model metrics.
-- Improve extraction quality with hybrid ML + rules.
-- Add API service mode (FastAPI) for system integration.
+- Add benchmark report and model comparison table.
+- Improve extraction precision with hybrid rules + model approach.
+- Expose inference through FastAPI for integration.
 
 ## Author
-La Quang Ninh  
-GitHub: https://github.com/laninh-tech
+La Quang Ninh
